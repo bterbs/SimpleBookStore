@@ -1,6 +1,12 @@
 # SimpleBookStore
  Simple bookstore content management system that allows users to view, add, delete, and update books. Books entered in the system can be viewed in a list, as a single entry on its own page, or searched for using basic searches (by title, author, or genre).
 
-# Web server can be started with the command: npm start
+ To run our lovely program:
 
-# Test suite can be run with the command: npm test
+ npm install
+
+ npm run db:init (this will drop and create a db called bookstore_books, beware if you have a db with that name!)
+
+ npm run db:seed 
+
+ npm start
