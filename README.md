@@ -5,8 +5,8 @@
 
  npm install
 
- npm run db:init (this will drop and create a db called bookstore_books, beware if you have a db with that name!)
+ npm run db:create (this will drop and create a db called bookstore_books, beware if you have a db with that name!)
 
- npm run db:seed 
+ npm run db:init 
 
  npm start
