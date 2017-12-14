@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js",
+    "start": "nodemon ./src/server.js",
     "db:create": "dropdb bookstore_books; createdb bookstore_books",
     "db:init": "npm run db:loadschema && npm run db:seed",
-    "db:loadschema": "psql bookstore_books < ./model/schema.sql",
-    "db:seed": "psql bookstore_books < load-data.sql"
+    "db:loadschema": "psql bookstore_books < src/models/db/schema/schema.sql",
+    "db:seed": "psql bookstore_books < src/models/db/schema/load-data.sql"
   },
   "repository": {
     "type": "git",
@@ -36,7 +36,6 @@
     "nodemon": "^1.12.5",
     "pg": "^7.4.0",
     "pg-promise": "^7.3.2",
-    "psql": "0.0.1",
     "pug": "^2.0.0-rc.4"
   }
 }
