@@ -1,17 +1,13 @@
 const express = require('express')
 const pug = require('pug')
-const ejs = require('ejs')
+const path = require('path')
 
 const app = express()
 
-app.use(express.static('./src/view'))
-
-// set 'html' as the engine, using ejs's renderFile function
-app.engine('html', ejs.renderFile)
-app.set('view engine', 'html')
+app.use(express.static(path.join(__dirname, '/public')))
 
 app.get('/', (request, response) => {
-  response.render('.src/view/index')
+  response.sendFile(path.join(__dirname, 'views/index.html'))
 })
 
 const server = app.listen(3000, () => {

@@ -9,6 +9,14 @@ const connectionString = 'postgres://localhost:5432/bookstore_books'
 // Creating a new database instance from the connection details:
 const db = pgp(connectionString)
 
+/**
+ * Queries the database to (return) all the books in library.
+ * @returns {Promise} Resolving to object representing all the books
+ */
+const getBooks = () => {
+  return db.all(`
+    SELECT * FROM books
+    `)}
 
-// Exporting the database object for shared use:
-module.exports = db;
+// Exporting getBooks() and the database object for shared use:
+module.exports = { getBooks, db };

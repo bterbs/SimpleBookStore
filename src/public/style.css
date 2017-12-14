@@ -1,18 +1,29 @@
+* {
+  margin: auto;
+  text-align: center;
+}
+
 button {
   background-color: grey;
 }
 
 .center {
     margin: auto;
-    width: 50%;
+    width: 60%;
     border: 3px solid grey;
     padding: 10px;
     text-align: center;
+}
+
+.left-align {
+  text-align: left;
+  margin: auto;
+  padding: 10px;
+  width: 60%;
 }
 
 .search-box {
   margin: auto;
   width: 50%;
   padding: 10px;
-  text-align: center;
 }
