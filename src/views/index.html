@@ -12,9 +12,18 @@
     <form>
       <div class="search-box">
         <label for="searchterm">Search Books:</label>
-        <input type="text" id="searchterm" name="user_search" value="Title, Author, or Genre"> <button type="submit">Go!</button>
+        <input type="text" id="searchterm" name="user_search" placeholder="Title, Author, or Genre">
+        <button type="submit">Go!</button>
       </div>
     </form>
+      <div class="add-book">
+        <form name="add-book-form" id="add-book-form" action="/addbook" method="POST">
+          <label>Add Book:</label>
+          <input type="text" placeholder="book title" name="title">
+          <input type="text" placeholder="book author" name="author">
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     <h3 class="left-align">Available Books</h3>
     <ul class="list-group">
           <!-- your resource items here -->
